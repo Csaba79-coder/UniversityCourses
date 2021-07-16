@@ -1,0 +1,58 @@
+= University
+
+feladat: fejtsd meg a feladat címét :)
+
+A szakok.txt fájl tartalmazza az adatokat, amikkel dolgoznod kell.
+szakok.txt in English is specialization.txt in my case!
+
+== A fájl részletes tartalma:
+
+* szak megnevezése
+* tanegység kódja
+* tanegység megnevezése
+
+== Tanegység típusa, amelynek értéke lehet:
+
+* K - kollokvium
+* G - gyakorlat
+* V - vizsga
+* EF - egyéni felkészülés
+* ajánlott félév(ek)
+
+* | (AltGr + W) jellel elválasztva (ha több van)
+
+* kredit
+* előfeltétel(ek) kódja
+* NULL szöveg, ha nincs előfeltétel
+* | (AltGr + W) jellel elválasztva, ha több van
+* csillag ( * ) jel áll a kód után, ha az gyenge előfeltétel
+
+'''
+
+=== Feladatok
+
+'''
+
+1. Olvasd be a fájlt szak szerint rendezve!
+
+2. Írj metódust, amely visszaadja (adatszerkezetben) azoknak a tanegységeket, amelyeknek nincs semmilyen előfeltétele.
+
+3. Írj metódust, amely két bemeneti paramétert kap: a szakhoz tartozó tanegységek listáját és egy típust, és visszaadja (adatszerkezetben) az összes olyan típusú tanegységet a bemeneti paraméterként kapott listából.
+
+4. Írj metódust, amely visszaadja az első legtöbb előfeltétellel rendelkező tanegységet (az összes tanegység közül, és nem szakonként)!
+
+5. Írj metódust, amely visszaadja azt a tanegységet (vagy tanegységeket), ahol a legtöbb egymásra épülő előfeltétel van!
+
+'''
+
+=== Egymásra épülő tanegység:
+
+'''
+
+A tanegység előfeltétele B tanegység
+
+B tanegység előfeltétele C tanegység
+
+C tanegység előfeltétele D tanegység
+
+--- A, B, C, D tanegységek egymásra épülne

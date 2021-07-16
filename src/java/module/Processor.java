@@ -16,6 +16,9 @@ public class Processor {
         FileHandler fileHandler = new FileHandler();
         fileHandler.readFile("szakok.txt");
 
+        System.out.println("-------------------1-------------------");
+        System.out.println("List by study courses: \n");
+
         List<Specializations> englishList = Reader.getSpecializationsEnglish();
         List<Specializations> germanList = Reader.getSpecializationsGerman();
         List<Specializations> informaticsList = Reader.getSpecializationsComputerLibrarian();
@@ -38,13 +41,23 @@ public class Processor {
         // specializationController.printInfosOfLists(otherStuds);
 
 
+        System.out.println("\n-------------------2-------------------");
+        System.out.println("List of studies that has no previous requirements: \n");
 
         specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(englishList));
-        specializationController.printListOfNoPreviousRequirement(specializationController.getListOfNoPreviousRequirement(englishList));
+        specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(germanList));
+        specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(informaticsList));
+        specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(japanList));
+        specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(classicalFiloList));
+        specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(hungarianList));
+        specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(scandinavianList));
+        specializationController.printCourseHasNoPreviousRequirement(specializationController.coursedHasNoPreviousRequirement(historyList));
 
-        System.out.println(specializationController.coursedHasNoPreviousRequirement(englishList));
-        System.out.println(specializationController.getListOfNoPreviousRequirement(englishList));
+        // specializationController.printListOfNoPreviousRequirement(specializationController.getListOfNoPreviousRequirement(englishList));
 
-        System.out.println(specializationController.makeHashMap(englishList));
+        // System.out.println(specializationController.coursedHasNoPreviousRequirement(englishList));
+        // System.out.println(specializationController.getListOfNoPreviousRequirement(englishList));
+
+        // System.out.println(specializationController.makeHashMap(englishList));
     }
 }

@@ -25,7 +25,7 @@ public class SpecializationController {
     public List<Specializations> coursedHasNoPreviousRequirement(List<Specializations> list) {
         List<Specializations> noPrevRequirement = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getRequirement().equals("NULL")) {
+            if (list.get(i).getRequirement().contains("NULL")) {
                 noPrevRequirement.add(list.get(i));
             }
         }
@@ -38,11 +38,11 @@ public class SpecializationController {
         }
     }
 
-    public HashMap<String, String> getListOfNoPreviousRequirement(List<Specializations> arrayList) {
+    /*public HashMap<String, String> getListOfNoPreviousRequirement(List<Specializations> arrayList) {
         HashMap<String, String> noPrevRequirements = new HashMap<>();
         for (int i = 0; i < arrayList.size(); i++) {
             // TODO check the condition
-            if ("NULL".equals(arrayList.get(i).getRequirement())) {
+            if (arrayList.get(i).getRequirement().contains("NULL")) {
                 noPrevRequirements.put(arrayList.get(i).getCodeOfCourses(), arrayList.get(i).getNameOfCourses().HUN_NAME.toLowerCase());
             }
         }
@@ -63,5 +63,5 @@ public class SpecializationController {
             }
         }
         return noPrevRequirements;
-    }
+    }*/
 }
