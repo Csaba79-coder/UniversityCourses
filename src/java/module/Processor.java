@@ -1,15 +1,9 @@
 package module;
 
 import controller.SpecializationController;
-import courses.Courses;
-import courses.Specializations;
 import model.UnitType;
-import utils.FileHandler;
 import utils.Reader;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Processor {
 

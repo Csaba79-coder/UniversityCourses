@@ -12,6 +12,9 @@ import java.util.Set;
 
 public class SpecializationController {
 
+    public SpecializationController() {
+    }
+
     public void printInfosOfLists(List<Specializations> list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.println((i + 1) + ". szak megnevezéseneve: " + list.get(i).getNameOfCourses().HUN_NAME.toLowerCase() +
