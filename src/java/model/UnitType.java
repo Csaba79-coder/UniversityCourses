@@ -2,10 +2,10 @@ package model;
 
 public enum UnitType {
 
-    KOLLOKVIUM("K"),
-    GYAKORLAT("G"),
-    VIZSGA("V"),
-    EGYENI_FELKESZULES("EF"),
+    COLLOQUIUM("K"),
+    PRACTICE("G"),
+    EXAM("V"),
+    INDIVIDUAL_PREPARATION("EF"),
     DEFAULT("N/A");
 
     public final String CODE;

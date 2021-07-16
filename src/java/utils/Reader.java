@@ -14,19 +14,28 @@ import java.util.List;
 
 public class Reader {
 
-    static List<Specializations> allSpecialization = new ArrayList<>();
-    static List<Specializations> specializationsEnglish = new ArrayList<>();
-    static List<Specializations> specializationsGerman = new ArrayList<>();
-    static List<Specializations> specializationsComputerLibrarian = new ArrayList<>();
-    static List<Specializations> specializationsJapan = new ArrayList<>();
-    static List<Specializations> specializationsClassicalPhilology = new ArrayList<>();
-    static List<Specializations> specializationsHungarian = new ArrayList<>();
-    static List<Specializations> specializationsScandinavian = new ArrayList<>();
-    static List<Specializations> specializationsHistory = new ArrayList<>();
-    static List<Specializations> specializationsOther = new ArrayList<>();
+    public List<Specializations> allSpecialization;
+    private List<Specializations> specializationsEnglish = new ArrayList<>();
+    private List<Specializations> specializationsGerman = new ArrayList<>();
+    private List<Specializations> specializationsComputerLibrarian = new ArrayList<>();
+    private List<Specializations> specializationsJapan = new ArrayList<>();
+    private List<Specializations> specializationsClassicalPhilology = new ArrayList<>();
+    private List<Specializations> specializationsHungarian = new ArrayList<>();
+    private List<Specializations> specializationsScandinavian = new ArrayList<>();
+    private List<Specializations> specializationsHistory = new ArrayList<>();
+    private List<Specializations> specializationsOther = new ArrayList<>();
 
+    
+    public Reader() {
+        try {
+            Buffer(FileHandler.SOURCE_TEXT);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        allSpecialization = fillUpAllSpecList();
+    }
 
-    public static void Buffer(String fileName) throws IOException {
+    public void Buffer(String fileName) throws IOException {
         int index = 0;
         FileReader fileReader = new FileReader(fileName);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -68,7 +77,7 @@ public class Reader {
         }
     }
 
-    private static List<Integer> semesterList(String string){
+    private List<Integer> semesterList(String string){
         List<Integer> myList = new ArrayList<>();
         String[] parts = string.split("\\|");
         for (int i = 0; i < parts.length; i++) {
@@ -77,88 +86,102 @@ public class Reader {
         return myList;
     }
 
-    private static List<String> createArrayOfPreStudies(String string) {
+    private List<String> createArrayOfPreStudies(String string) {
         String[] parts = string.split("\\|");
         return new ArrayList<>(Arrays.asList(parts));
     }
 
-    public static List<Specializations> getSpecializationsEnglish() {
+    public List<Specializations> getSpecializationsEnglish() {
         return specializationsEnglish;
     }
 
-    public static List<Specializations> getAllSpecialization() {
+    public List<Specializations> getAllSpecialization() {
         return allSpecialization;
     }
 
-    public static void setAllSpecialization(List<Specializations> allSpecialization) {
-        Reader.allSpecialization = allSpecialization;
+    public void setAllSpecialization(List<Specializations> allSpecialization) {
+        this.allSpecialization = allSpecialization;
     }
 
-    public static void setSpecializationsEnglish(List<Specializations> specializationsEnglish) {
-        Reader.specializationsEnglish = specializationsEnglish;
+    public void setSpecializationsEnglish(List<Specializations> specializationsEnglish) {
+        this.specializationsEnglish = specializationsEnglish;
     }
 
-    public static List<Specializations> getSpecializationsGerman() {
+    public List<Specializations> getSpecializationsGerman() {
         return specializationsGerman;
     }
 
-    public static void setSpecializationsGerman(List<Specializations> specializationsGerman) {
-        Reader.specializationsGerman = specializationsGerman;
+    public void setSpecializationsGerman(List<Specializations> specializationsGerman) {
+        this.specializationsGerman = specializationsGerman;
     }
 
-    public static List<Specializations> getSpecializationsComputerLibrarian() {
+    public List<Specializations> getSpecializationsComputerLibrarian() {
         return specializationsComputerLibrarian;
     }
 
-    public static void setSpecializationsComputerLibrarian(List<Specializations> specializationsComputerLibrarian) {
-        Reader.specializationsComputerLibrarian = specializationsComputerLibrarian;
+    public void setSpecializationsComputerLibrarian(List<Specializations> specializationsComputerLibrarian) {
+        this.specializationsComputerLibrarian = specializationsComputerLibrarian;
     }
 
-    public static List<Specializations> getSpecializationsJapan() {
+    public List<Specializations> getSpecializationsJapan() {
         return specializationsJapan;
     }
 
-    public static void setSpecializationsJapan(List<Specializations> specializationsJapan) {
-        Reader.specializationsJapan = specializationsJapan;
+    public void setSpecializationsJapan(List<Specializations> specializationsJapan) {
+        this.specializationsJapan = specializationsJapan;
     }
 
-    public static List<Specializations> getSpecializationsClassicalPhilology() {
+    public List<Specializations> getSpecializationsClassicalPhilology() {
         return specializationsClassicalPhilology;
     }
 
-    public static void setSpecializationsClassicalPhilology(List<Specializations> specializationsClassicalPhilology) {
-        Reader.specializationsClassicalPhilology = specializationsClassicalPhilology;
+    public void setSpecializationsClassicalPhilology(List<Specializations> specializationsClassicalPhilology) {
+        this.specializationsClassicalPhilology = specializationsClassicalPhilology;
     }
 
-    public static List<Specializations> getSpecializationsHungarian() {
+    public List<Specializations> getSpecializationsHungarian() {
         return specializationsHungarian;
     }
 
-    public static void setSpecializationsHungarian(List<Specializations> specializationsHungarian) {
-        Reader.specializationsHungarian = specializationsHungarian;
+    public void setSpecializationsHungarian(List<Specializations> specializationsHungarian) {
+        this.specializationsHungarian = specializationsHungarian;
     }
 
-    public static List<Specializations> getSpecializationsScandinavian() {
+    public List<Specializations> getSpecializationsScandinavian() {
         return specializationsScandinavian;
     }
 
-    public static void setSpecializationsScandinavian(List<Specializations> specializationsScandinavian) {
-        Reader.specializationsScandinavian = specializationsScandinavian;
+    public void setSpecializationsScandinavian(List<Specializations> specializationsScandinavian) {
+        this.specializationsScandinavian = specializationsScandinavian;
     }
 
-    public static List<Specializations> getSpecializationsHistory() {
+    public List<Specializations> getSpecializationsHistory() {
         return specializationsHistory;
     }
 
-    public static void setSpecializationsHistory(List<Specializations> specializationsHistory) {
-        Reader.specializationsHistory = specializationsHistory;
+    public void setSpecializationsHistory(List<Specializations> specializationsHistory) {
+        this.specializationsHistory = specializationsHistory;
     }
 
-    public static List<Specializations> getSpecializationsOther() {
+    public List<Specializations> getSpecializationsOther() {
         return specializationsOther;
     }
 
-    public static void setSpecializationsOther(List<Specializations> specializationsOther) {
-        Reader.specializationsOther = specializationsOther;
+    public void setSpecializationsOther(List<Specializations> specializationsOther) {
+        this.specializationsOther = specializationsOther;
+    }
+    
+    public List<Specializations> fillUpAllSpecList() {
+        List<Specializations> tempList = new ArrayList<>();
+        System.out.println("hello");
+        tempList.addAll(specializationsEnglish);
+        tempList.addAll(specializationsGerman != null ? specializationsGerman : null);
+        tempList.addAll(specializationsComputerLibrarian);
+        tempList.addAll(specializationsJapan);
+        tempList.addAll(specializationsClassicalPhilology);
+        tempList.addAll(specializationsHungarian);
+        tempList.addAll(specializationsScandinavian);
+        tempList.addAll(specializationsHistory);
+        return tempList;
     }
 }
