@@ -173,7 +173,6 @@ public class Reader {
     
     public List<Specializations> fillUpAllSpecList() {
         List<Specializations> tempList = new ArrayList<>();
-        System.out.println("hello");
         tempList.addAll(specializationsEnglish);
         tempList.addAll(specializationsGerman != null ? specializationsGerman : null);
         tempList.addAll(specializationsComputerLibrarian);
