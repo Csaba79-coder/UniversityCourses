@@ -1,0 +1,7 @@
+by Lóri:
+
+for (String line; (line = bufferedReader.readLine()) != null; ) {
+            subjectMap.putIfAbsent(line.split(",")[0], new ArrayList<>());
+            subjectMap.get(line.split(",")).add(new Subject(line.split(",")));
+        }
+
