@@ -1,0 +1,8 @@
+// Java 7
+  BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
+  // Java 8
+  List<String> list = Files.readAllLines(path, StandardCharsets.UTF_8);
+  // Java 8
+  Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8);
+  // Java 11
+  String s = Files.readString(path, StandardCharsets.UTF_8);
