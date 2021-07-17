@@ -1,0 +1,8 @@
+// can be a solution!!!
+
+public static String clearMajorName(String original) {
+        if (original.charAt(0) > 370) {
+            return original.substring(1);
+        }
+        return original;
+    }
