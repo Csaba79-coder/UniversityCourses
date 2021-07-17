@@ -35,7 +35,7 @@ szakok.txt in English is specialization.txt in my case!
 
 1. Olvasd be a fájlt szak szerint rendezve!
 
-2. Írj metódust, amely visszaadja (adatszerkezetben) azoknak a tanegységeket, amelyeknek nincs semmilyen előfeltétele.
+2. Írj metódust, amely visszaadja (adatszerkezetben) azokat a tanegységeket, amelyeknek nincs semmilyen előfeltétele.
 
 3. Írj metódust, amely két bemeneti paramétert kap: a szakhoz tartozó tanegységek listáját és egy típust, és visszaadja (adatszerkezetben) az összes olyan típusú tanegységet a bemeneti paraméterként kapott listából.
 
